@@ -3,7 +3,8 @@ RUN dnf install -y \
     nodejs \
     python3 \
     curl \
-    sudo
-COPY run.sh /usr/local/bin/run.sh
-RUN chmod +x /usr/local/bin/run.sh
-CMD ["/usr/local/bin/run.sh"]
+    sudo \
+    bash
+WORKDIR /BABAPIRO
+COPY . /BABAPIRO
+CMD ["bash", "run.sh"]
