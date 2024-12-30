@@ -1,0 +1,1 @@
+worker: pip install jupyter
